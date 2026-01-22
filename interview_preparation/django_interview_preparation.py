@@ -1,6 +1,27 @@
-""" ============== Python / Django Interview Preparation ============== """
 
-'''
+
+
+'''                             ============== Python Django Interview Preparation ==============                             
+
+
+Prepared by Muhammad Nouman (In Roman Urdu Language)
+Date: [22/january/2026]
+Version: 1.0
+
+
+1. Introduction to Python and Django
+
+    Python Kya Hai?:
+                   i). High-level programming language, easy syntax,
+                       used for web, data science, AI.
+                       
+                       Example:
+                            print("Hello World").
+                            
+    Django Kya Hai?:
+                   i). Python ka web framework, rapid development ke liye hota hai.
+                       Yeh MVT (Model-View-Template) pattern follow karta hai, na k MVC (Model-View-Controller).                        
+
 SECTION 1: Object-Oriented Programming (OOP)
 ================================================
 

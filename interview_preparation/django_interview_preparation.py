@@ -19,8 +19,76 @@ Version: 1.0
                             print("Hello World").
                             
     Django Kya Hai?:
-                   i). Python ka web framework, rapid development ke liye hota hai.
-                       Yeh MVT (Model-View-Template) pattern follow karta hai, na k MVC (Model-View-Controller).                        
+                   i). Django ek high-level Python web framework hai jo fast, secure aur scalable web applications banane ke liye use hota hai.
+                  ii). Yeh MVT (Model-View-Template) pattern follow karta hai, na k MVC (Model-View-Controller).                        
+                 iii). Batteries-Included Framework     
+                            Django ko “batteries-included” is liye kaha jata hai kyun ke isme bohot si cheezen built-in hoti hain:
+                            
+                        Example:
+                          - Authentication (login, logout, permissions)
+                               - Admin Panel (auto-generated)
+                                - ORM (database queries without SQL)
+                                - Forms & validations
+                                - URL routing
+                                - Security features
+                                
+                                Iska faida:
+                                          - Developer ko har cheez zero se likhne ki zarurat nahi hoti, development fast ho jati hai.
+                
+                  iv). Security (Very Important for Interview) 
+                           Django security by default handle karta hai:             
+                            - SQL Injection protection
+                                      a). SQL Injection kya hai?
+                                        SQL Injection aik security attack hai jisme attacker malicious SQL code inject karta hai database mein.
+                                        Isse attacker sensitive data chura sakta hai, manipulate kar sakta hai ya delete kar sakta hai.
+                                           a). Malicious SQL kya hota hai?
+                                                Malicious SQL wo code hota hai jo database ko nuksan pohcha sakta hai,
+                                                jaise ke data chori kr lena, delete kar dena ya unauthorized access lena.
+                                           b). Example of SQL Injection:
+                                                Suppose ek login form hai jisme username aur password fields hain.
+                                                Agar user input ko properly sanitize na kiya jaye,
+                                                to attacker kuch aisa input de sakta hai:
+                                                Username: ' OR '1'='1
+                                                Password: ' OR '1'='1
+                                                Is input se SQL query kuch aisi ban jayegi:
+                                                SELECT * FROM users WHERE username='' OR '1'='1' AND password='' OR '1'='1';
+                                                Yeh query hamesha true return karegi, jisse attacker unauthorized access le sakta hai.
+                                           c). Consequences of SQL Injection:
+                                                - Data theft
+                                                - Data manipulation
+                                                - Data deletion
+                                                - Unauthorized access
+                                      
+                                      b). Django kaise protect karta hai?
+                                        Django ORM automatically parameterized queries use karta hai,
+                                        jisse SQL Injection attacks se bachav hota hai.
+                                        
+                                 - Cross-Site Scripting (XSS)
+                                    - Cross-Site Request Forgery (CSRF)
+                                    - Clickjacking protection
+                                    - Secure password hashing
+                                    Iska faida:
+                                            - Developers ko security features implement karne ki kam zarurat hoti hai, applications zyada secure hoti hain.                       
+                        
+                  v). Scalability:
+                           Django applications easily scale ho sakti hain, chhoti se le kar bohot badi applications tak.
+                           Examples: 
+                                   - Instagram,
+                                   - Pinterest,
+                                      - Disqus,
+                                        - Mozilla
+                                        
+                 vi). Rapid Development:
+                                        Django ka motto hai:
+                                        Don’t Repeat Yourself (DRY)
+                                        - Iska matlab hai ke code ko baar baar repeat na karo, reusable components banao.
+                                        - Isse development fast hoti hai aur maintenance easy ho jata hai.
+                                        - Example: Django ka admin panel automatically generate ho jata hai,
+                                          jisse developers ko manually admin interface banane ki zarurat nahi hoti.
+                                        - Less code
+                                        - Reusable components
+                                        - Fast feature development
+
 
 SECTION 1: Object-Oriented Programming (OOP)
 ================================================

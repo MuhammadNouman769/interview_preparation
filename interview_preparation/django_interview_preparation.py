@@ -64,11 +64,81 @@ Version: 1.0
                                         jisse SQL Injection attacks se bachav hota hai.
                                         
                                  - Cross-Site Scripting (XSS)
+        
+                                        a).  Roman Urdu Vocabulary:
+                                            - Security vulnerability → system ki kamzori
+                                            - Attacker → hacker / attack karne wala
+                                            - Malicious scripts → nuqsaan pohanchane wali JavaScript
+                                            - Inject karna → zabardasti ghusa dena
+                                            - Trusted website → wo website jahan users bharosa karte hain
+                                        
+                                        b). XSS ke nuksanat (Consequences)
+                                                    i). Cookie Theft
+                                                            - Cookie → browser mein saved login info
+                                                            - Attacker user ki cookies chura kar uske account mein login kar sakta hai.
+
+                                                   ii). Session Hijacking
+                                                            - Session → user ka login time
+                                                            - Hijack → zabardasti control lena
+                                                            - Attacker user ke login session ka control le leta hai.
+
+                                                    iii). Phishing Attacks
+                                                            - Phishing → fake pages bana kar password churaana
+                                                            - User ko fake form dikha kar password le liya jata hai.
+
+                                                     iv). Website Defacement
+
+                                                            - Defacement → website ka look/text bigaarna
+                                                            - Website par ghalat message ya images show hone lagti hain.
+                                                                        
+                                    a). XSS kya hai?
+                                                XSS aik security vulnerability hai jisme attacker malicious scripts inject karta hai trusted websites mein.
+                                                Isse attacker users ke browsers mein unwanted actions perform kar sakta hai,
+                                                jaise ke cookies chura lena, session hijack karna ya phishing attacks karna.
+                                           b). Example of XSS:
+                                                Suppose ek comment section hai jisme users apne comments post kar sakte hain.
+                                                Agar input ko properly sanitize na kiya jaye,
+                                                to attacker kuch aisa comment post kar sakta hai:
+                                                <script>alert('Hacked!');</script>
+                                                Jab koi user yeh comment dekhega, to yeh script execute ho jayegi
+                                                aur alert box show karegi.
+                                           c). Consequences of XSS:
+                                                - Cookie theft
+                                                - Session hijacking
+                                                - Phishing attacks
+                                                - Defacement of websites
+                                                
+                                      b). Django kaise protect karta hai?
+                                          Django templates by default auto-escaping enable karte hain,
+                                          jisse malicious scripts automatically escape ho jati hain.
+                                        
+                                            a).  Mushkil alfaaz → Asaan matlab
+
+                                                        - Auto-escaping → dangerous characters ko safe bana dena
+                                                        - < → &lt;
+                                                        - > → &gt;
+                                                        - Example:
+                                                        - User ne input diya:
+                                                        - <script>alert('Hacked!');</script>
+                                                        - Django isko browser ko aise bhejta hai:
+                                                        - &lt;script&gt;alert('Hacked!');&lt;/script&gt;
+                                                            - Browser isko text samajhta hai, code nahi
+                                                            - Script execute nahi hoti 
+                                            
+                                            - Short Interview Answer:
+                                                i).   XSS aik attack hai jisme attacker malicious JavaScript inject karta hai jo users ke browser mein
+                                                      execute hoti hai. Django templates by default auto-escaping ke zariye XSS se protect karti hain.
+                                                                                  
+                                                            
+                                        
+                                        
                                     - Cross-Site Request Forgery (CSRF)
                                     - Clickjacking protection
                                     - Secure password hashing
                                     Iska faida:
-                                            - Developers ko security features implement karne ki kam zarurat hoti hai, applications zyada secure hoti hain.                       
+                                            - Developers ko security features implement karne ki kam zarurat hoti hai, applications zyada secure hoti hain. 
+                                            
+                                           
                         
                   v). Scalability:
                            Django applications easily scale ho sakti hain, chhoti se le kar bohot badi applications tak.

@@ -147,6 +147,7 @@ Version: 1.0
                                    - Pinterest,
                                       - Disqus,
                                         - Mozilla
+                                        - Reddit
                                         
                  vi). Rapid Development:
                                         Django ka motto hai:
@@ -158,6 +159,68 @@ Version: 1.0
                                         - Less code
                                         - Reusable components
                                         - Fast feature development
+
+ 2. What is iteration?
+        Iteration ek process hota hai jo ek iterable object ko iterate karta hai.
+        Iteration ko iterate karte waqt, iteration ek next element return karta hai.
+
+3. what is iterator?
+        Iterator ek object hota hai jo iterable objects ko iterate karta hai.
+
+4. what is iterable?
+        Iterable ek object hota hai jisko hum loop ke zariye iterate kar sakte hain
+
+5. Difference between iterable and iterator?
+        Iterable:
+                - Iterable ek aisa object hota hai jisko hum loop ke zariye iterate kar sakte hain.
+                - Iterable objects me list, tuple, string, dictionary, set, range shamil hain.
+                - Iterable object me __iter__() method hota hai jo iterator return
+                    karta hai.
+                    example:
+ ...
+ '''
+                    my_list = [1, 2, 3]
+                    iterator = iter(my_list)  # my_list is iterable
+                    print(next(iterator))  # prints 1
+                    print(next(iterator))  # prints 2
+                    print(next(iterator))  # prints 3
+                    print(next(iterator))  # raises StopIteration
+'''
+
+        Iterator:
+                - Iterator ek aisa object hota hai jo iterable objects ko iterate karta hai.
+                - Iterator object me next() method hota hai jo next element return karta hai.
+                - Iterator object me __iter__() method hota hai jo khud ko return karta hai.        
+'''
+                    my_list = [1, 2, 3]
+                    iterator = iter(my_list)  # my_list is iterable
+                    print(next(iterator))  # prints 1
+                    print(next(iterator))  # prints 2
+                    print(next(iterator))  # prints 3     
+'''
+what is generator?
+        Generator ek function hai jo yield keyword use krte hain or value ko one by one return krte hain
+        with out storing all values in memory
+        Example:
+'''
+def mera_generator():
+    yield 1
+    yield 2
+    yield 3
+gen = mera_generator()
+print(next(gen))  # prints 1
+print(next(gen))  # prints 2
+print(next(gen))  # prints 3
+print(next(gen))  # raises StopIteration 
+
+'''
+defrance between generator and iterator?
+        Generator:
+                - Generator ek special type ka iterator hota hai jo function ke zariye create hota hai.
+                - Generator function me yield keyword use hota hai jo value ko one by one return karta hai.
+                - Generator function state ko maintain karta hai, jisse next value return karne ke liye function wapas se call karne ki zarurat nahi hoti.
+                - Memory efficient hota hai kyun ke ye saari values ek sath memory me store nahi karta.
+
 
 
 SECTION 1: Object-Oriented Programming (OOP)

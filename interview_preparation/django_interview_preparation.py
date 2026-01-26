@@ -489,7 +489,14 @@ child.child_method()  # Child method
         iii) what is  Polymorphism?
                     Polymorphism aik OOP concept hai jisme same method ya function different data types ya objects ke
                     liye different behavior provide karta hai.
-                    Same method name, lekin different behavior. 
+                    Same method name, lekin different behavior.
+                    overloading aur overriding polymorphism ke do main types hain.
+                    1. Method Overloading:
+                        Method Overloading me aik class me same method name ke multiple versions hote hain  
+                        jo different parameters accept karte hain.
+                        Python me method overloading directly support nahi hoti,
+                        lekin hum default arguments ya *args, **kwargs ka use karke achieve kar sakte hain. 
+                         
                     Example:
                     '''
 class Dog:

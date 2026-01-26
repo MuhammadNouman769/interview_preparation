@@ -163,12 +163,104 @@ Version: 1.0
  2. What is iteration?
         Iteration ek process hota hai jo ek iterable object ko iterate karta hai.
         Iteration ko iterate karte waqt, iteration ek next element return karta hai.
+        
+        usecases of iteration?
+                - Looping through data structures (list, tuple, dictionary, set)
+                - Data processing
+                - Generating sequences
+                - Implementing algorithms
+        Example:
+'''
+def mera_apna_for_loop(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            item = next(iterator)
+            print(item)
+        except StopIteration:
+            break
+# list, range, tuple are iterable objects
+a = [1, 2, 3, 4, 5]
+b = range(1, 10)
+c = (1, 2, 3, 4, 5)
+d= {'a':1,'b':2,'c':3}
+e = {1,2,3,4,5}
+mera_apna_for_loop(a)
+mera_apna_for_loop(b)
+mera_apna_for_loop(c)
+mera_apna_for_loop(d)
+mera_apna_for_loop(e)   
+'''
+output:
+1
+2
+3
+4       
+5
+1                       
+.
+.
+.
 
 3. what is iterator?
         Iterator ek object hota hai jo iterable objects ko iterate karta hai.
+         usecases of iterator?
+                - Looping through data structures (list, tuple, dictionary, set)
+                - Data processing
+                - Generating sequences
+                - Implementing algorithms
+        Example:
+'''
+def mera_apna_iterator(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            item = next(iterator)
+            print(item)
+        except StopIteration:
+            break
+# list, range, tuple are iterable objects
+a = [1, 2, 3, 4, 5] 
+b = range(1, 10)
+c = (1, 2, 3, 4, 5)
+d= {'a':1,'b':2,'c':3}
+e = {1,2,3,4,5}
+mera_apna_iterator(a)
+mera_apna_iterator(b)
+mera_apna_iterator(c)
+mera_apna_iterator(d)
+mera_apna_iterator(e)
+''' 
 
 4. what is iterable?
         Iterable ek object hota hai jisko hum loop ke zariye iterate kar sakte hain
+        usecases of iterable?
+                - Looping through data structures (list, tuple, dictionary, set)
+                - Data processing
+                - Generating sequences
+                - Implementing algorithms
+        Example:
+'''
+def mera_apna_iterable(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            item = next(iterator)
+            print(item)
+        except StopIteration:
+            break           
+# list, range, tuple are iterable objects
+a = [1, 2, 3, 4, 5]
+b = range(1, 10)
+c = (1, 2, 3, 4, 5)
+d= {'a':1,'b':2,'c':3}
+e = {1,2,3,4,5}
+mera_apna_iterable(a)
+mera_apna_iterable(b)
+mera_apna_iterable(c)
+mera_apna_iterable(d)
+mera_apna_iterable(e)
+''' 
 
 5. Difference between iterable and iterator?
         Iterable:
@@ -198,9 +290,14 @@ Version: 1.0
                     print(next(iterator))  # prints 2
                     print(next(iterator))  # prints 3     
 '''
-what is generator?
+7. what is generator?
         Generator ek function hai jo yield keyword use krte hain or value ko one by one return krte hain
-        with out storing all values in memory
+
+        usecases of generator?
+                - Large data sets ko handle krne k liye
+                - Memory efficient programming k liye
+                - Infinite sequences ko create krne k liye      
+    
         Example:
 '''
 def mera_generator():
@@ -214,92 +311,84 @@ print(next(gen))  # prints 3
 print(next(gen))  # raises StopIteration 
 
 '''
-defrance between generator and iterator?
+Difference between generator and iterator?
         Generator:
                 - Generator ek special type ka iterator hota hai jo function ke zariye create hota hai.
                 - Generator function me yield keyword use hota hai jo value ko one by one return karta hai.
-                - Generator function state ko maintain karta hai, jisse next value return karne ke liye function wapas se call karne ki zarurat nahi hoti.
+                - Generator function state ko maintain karta hai,
+                  jisse next value return karne ke liye function wapas se call karne ki zarurat nahi hoti.
                 - Memory efficient hota hai kyun ke ye saari values ek sath memory me store nahi karta.
-
-
-
-SECTION 1: Object-Oriented Programming (OOP)
-================================================
-
-        1. What is OOP?
-                        OOP ek programming style hai jisme hum real-life cheezon
-                        ko objects aur classes ki form mein represent karte hain.
+                
+                Example:
 '''
-
-# Example:
-class Car:
-    def __init__(self, brand, color):
-        self.brand = brand
-        self.color = color
-
-    def drive(self):
-        print(f"{self.brand} car {self.color} color ki hai.")
-
-car1 = Car("Toyota", "Red")
-car2 = Car("Honda", "Blue")
-
-car1.drive()
-car2.drive()
-
+def mera_generator():
+    yield 1
+    yield 2
+    yield 3
+gen = mera_generator()
+print(next(gen))  # prints 1
+print(next(gen))  # prints 2
+print(next(gen))  # prints 3
+print(next(gen))  # raises StopIteration
 '''
-Output:
-Toyota car Red color ki hai.
-Honda car Blue color ki hai.
+8. what is decorator?
+        Decorator ek function hota hai jo dusre function ki functionality ko bina change kiye enhance karta hai.
+        decorators Python me bohot commonly use hote hain, especially Django me.
+        usecases of decorator?
+                - Logging
+                - Authentication
+                - Caching
+                - Input validation  
+        Example:
 '''
-
-
-'''
-        2. Why OOP is used?
-                            OOP ko is liye use kiya jata hai kyun ke ye:
-                            - Code reusable banata hai
-                            - Security provide karta hai
-                            - Maintainable hota hai
-                            - Real-world problems ko easily handle karta hai
-'''
-
-# Example:
-class BankAccount:
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.__balance = balance  # private variable
-
-    def deposit(self, amount):
-        self.__balance += amount
-        print(f"{amount} deposit ho gaye. New balance: {self.__balance}")
-
-    def withdraw(self, amount):
-        if amount <= self.__balance:
-            self.__balance -= amount
-            print(f"{amount} withdraw ho gaye. Remaining balance: {self.__balance}")
-        else:
-            print("Insufficient balance!")
-
-account1 = BankAccount("Ali", 5000)
-account2 = BankAccount("Sara", 10000)
-
-account1.deposit(2000)
-account2.withdraw(3000)
-
+def mera_decorator(func):
+    def wrapper():
+        print("Function call hone wala hai")
+        func()
+        print("Function call ho chuka hai")
+    return wrapper
+@mera_decorator
+def mera_function():
+    print("Hello World")
+mera_function() 
 '''
 Output:
-2000 deposit ho gaye. New balance: 7000
-3000 withdraw ho gaye. Remaining balance: 7000
+Function call hone wala hai
+Hello World
+Function call ho chuka hai
+'''
 '''
 
 
-'''
-SECTION 2: Four Pillars of OOP
-================================================
-        i) Encapsulation
-                            Encapsulation ka matlab data ko hide karna aur
-                            sirf methods ke zariye access dena.
-'''
 
+9. What is OOP?
+        OOP (Object-Oriented Programming) ek programming paradigm hai jo
+        real-world entities ko objects aur classes ki form mein represent karta hai.
+        example:
+'''
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print(f"{self.name} says Woof!")        
+'''
+        1. What are the main pillars of OOP?
+        OOP ke 4 pillars hain: Encapsulation, Inheritance, Polymorphism, Abstraction.
+        
+        i). Encapsulation
+                    Encapsulation ka matlab hai data aur methods ko aik class me band karna 
+                    aur data ko direct access se protect karna.
+                    encapsulation se data security aur integrity ensure hoti hai.
+                    
+                    why using getters and setters?.
+                        Getter aur Setter methods, encapsulation me private data
+                        ko access aur modify karne ke liye use hote hain.
+                            i). Getter private variable ki value read / get karne ke liye hota hai
+                           ii). Setter private variable ki value update / change karne ke liye hota hai
+                    Example:
+'''
 class EmployeeEncapsulation:
     def __init__(self, name, salary):
         self.name = name
@@ -320,36 +409,77 @@ print(emp1.get_salary())
 emp1.set_salary(60000)
 
 '''
-        ii) Inheritance
-                        Inheritance ka matlab parent class ki properties
-                        child class use kar sakti hai.
+        ii) what is Inheritance?
+                  Inheritance aik OOP concept hai jisme child class, parent class ki properties
+                  aur methods ko inherit karti hai.
+                  Inheritance code reusability aur maintainability improve karta hai.
+
+                  types of Inheritance:
+                        - Single Inheritance
+                        - Multi-level Inheritance
+                        - Multiple Inheritance
+
+                    what is single Inheritance?:
+                       Single Inheritance me aik child class sirf aik hi parent class se inherit karti hai.
+                       Yeh sab se simple aur commonly used inheritance type hai.
+                       example:'''
+class Parent:
+    def parent_method(self):
+        print("Parent method")
+
+class Child(Parent):
+    def child_method(self):
+        print("Child method")
+child = Child()
+child.parent_method()  # Parent method
+child.child_method()   # Child method
 '''
-
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def info(self):
-        print(f"Name: {self.name}, Age: {self.age}")
-
-class Employee(Person):
-    def __init__(self, name, age, salary):
-        super().__init__(name, age)
-        self.salary = salary
-
-    def employee_info(self):
-        print(f"Salary: {self.salary}")
-
-emp = Employee("Ali", 30, 50000)
-emp.info()
-emp.employee_info()
+                    what is multi-level Inheritance?:
+                        Multi-level Inheritance me aik child class  parent class se inherit karti hai,
+                        or parent   grand parent class se inherit karti hai.
+                        Is me inheritance ka ek chain banta hai.
+                    Example:
+'''
+class GrandParent:
+    def grandparent_method(self):
+        print("GrandParent method")
+class ParentMultiLevel(GrandParent):
+    def parent_method(self):
+        print("Parent method")
+class ChildMultiLevel(ParentMultiLevel):
+    def child_method(self):
+        print("Child method")
+child = ChildMultiLevel()
+child.grandparent_method()  # GrandParent method
+child.parent_method()       # Parent method
+child.child_method()        # Child method
+'''
+                    what is multiple Inheritance?:
+                        Multiple Inheritance me aik child class ek se zyada parent classes se inherit karti hai.
+                        Is me child class multiple classes ki properties aur methods use kar sakti hai.
+                  Example:
+                  '''
+class ParentOne:
+    def method_one(self):
+        print("Method from Parent One")
+class ParentTwo:
+    def method_two(self):
+        print("Method from Parent Two")
+class ChildMultiple(ParentOne, ParentTwo):
+    def child_method(self):
+        print("Child method")
+child = ChildMultiple()         
+child.method_one()  # Method from Parent One
+child.method_two()  # Method from Parent Two
+child.child_method()  # Child method    
 
 '''
-        iii) Polymorphism
-                            Same method name, lekin different behavior. 
-'''
-
+        iii) what is  Polymorphism?
+                    Polymorphism aik OOP concept hai jisme same method ya function different data types ya objects ke
+                    liye different behavior provide karta hai.
+                    Same method name, lekin different behavior. 
+                    Example:
+                    '''
 class Dog:
     def sound(self):
         print("Dog wao wao karta hai")
@@ -364,20 +494,15 @@ cat = Cat()
 dog.sound()
 cat.sound()
 
-'''
-Interview Tip:
-Mobile ka power button – same hota hai,
-lekin on aur off dono kaam karta hai.
-'''
 
-
-'''
-iv) Abstraction
-
-Sirf important cheezain dikhana aur
-implementation details hide karna.
-'''
-
+                    '''
+                    iv) what is Abstraction?
+                    Abstraction aik OOP concept hai jisme complex implementation details ko hide karke
+                    sirf essential features ko expose kiya jata hai.
+                    Sirf important cheezain dikhana aur
+                    implementation details hide karna.
+                    Example:
+                    '''
 from abc import ABC, abstractmethod
 
 class Vehicle(ABC):
@@ -401,129 +526,125 @@ bike.start()
 
 
 '''
-SECTION 3: OOP vs Procedural Programming
-================================================
-        Procedural:
-        - Functions aur data separate hote hain
+            10. What is Middleware?
+                Middleware Django ka component hai jo request aur response ke beech processing ka kaam karta hai.
+                Middleware ek tarah ka bridge hai jo Django application aur web server ke beech hota hai.
+                Middleware request ko process karta hai before it reaches the view,
+                aur response ko process karta hai before it is sent to the client.
+                Middleware ka use common tasks ke liye hota hai jaise:
+                    - Authentication
+                    - Security (CSRF, XSS)
+                    - Logging
+                    - Performance optimization
+                Example:
+'''
+class SimpleMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response       
+    def __call__(self, request):
+        # Request processing
+        print("Request received:", request.path)
+        response = self.get_response(request)
+        # Response processing
+        print("Response sent with status:", response.status_code)
+        return response
+'''
+'''
 
-        OOP:
-        - Data aur methods class ke andar hote hain
+
+
+
+'''
+                11. what is  method overriding in Python?
+                        Method Overriding me child class parent class ke method ko redefine karke
+                        apna behavior implement karti hai.
+                              
+        Example:
+'''
+class ParentClass:
+    def show(self):
+        print("Parent class method")
+class ChildClass(ParentClass):
+    def show(self):
+        print("Child class method")
+child = ChildClass()
+child.show()  # Child class method
+'''
+Output:
+Child class method
+                                 
+            12.  what is __init__ Method?
+                    __init__ method ek special method hai jo class ka object create hone
+                    par automatically call hota hai.Iska use object ki initial state set karne ke liye hota hai.
+        Example:
         '''
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-# Procedural Example
-balance = 5000
-
-def deposit(amount):
-    global balance
-    balance += amount
-
-deposit(1000)
-print(balance)
-
+student1 = Student("Asif", 20)
+print(student1.name)
+print(student1.age) 
 '''
-Data aur function separate → security kam
+Output:
+Asif
+20
+''' 
 '''
-
-# OOP Example
-class Account:
-    def __init__(self, balance):
-        self.__balance = balance
-
-    def deposit(self, amount):
-        self.__balance += amount
-        print(self.__balance)
-
-acc = Account(5000)
-acc.deposit(1000)
-
+                     what is Django ORM?
+                                Django ORM (Object-Relational Mapper) Django ka built-in powerful feature hai
+                                jo Python classes ke through database operations simplify karta hai.
+                                        Developers ko direct SQL queries likhne ki zarurat nahi hoti
+                                        ORM automatically database ke saath interact karta hai 
+                            Key Features of Django ORM
+                                  1 database:
+                                        Django ORM multiple databases support karta hai
+                                        jaise SQLite, PostgreSQL, MySQL, Oracle.
+                                  2. Model Definition:
+                                        Django ORM me models Python classes hoti hain
+                                        jo database tables ko represent karti hain.
+                                  3. QuerySet API:
+                                        Django ORM QuerySet API provide karta hai
+                                        jo database queries ko Python code ke zariye likhne ki sahulat deta hai.
+                                  4. Relationships Handling:
+                                        Django ORM foreign keys, many-to-many relationships
+                                        aur one-to-one relationships ko easily handle karta hai.
+                                  5. Migrations:
+                                        Django ORM database schema changes ko manage karne ke liye
+                                        migrations ka use karta hai.
+                    Example of Django ORM:
 '''
-Data secure aur controlled → encapsulation
-'''
+from django.db import models
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
+    published_date = models.DateField()
+# Creating a new book record
+new_book = Book(title="Django for Beginners", author="John Doe", published_date="2023-01-01")
+new_book.save()
+# Querying books
+books = Book.objects.filter(author="John Doe")
+for book in books:
+    print(book.title)
+ '''       
+        what is REST APIs (DRF)?:
+                REST (Representational State Transfer) APIs aik architectural style hai
+                jo web services banane ke liye use hota hai.
+                     Ye APIs client aur server ke darmiyan data exchange karte hain
+                     HTTP methods jaise GET, POST, PUT, DELETE ka use hota hai
+                Django REST Framework (DRF) Django ka powerful library hai
+                jo RESTful APIs banane ke liye use hota hai.
+        
+        Key Features of Django REST Framework (DRF):
+                1. Serialization:
+                    DRF data ko JSON, XML jaise formats me convert karne ke liye serializers provide karta hai.
+                2. ViewSets and Routers:
+                    DRF ViewSets aur Routers provide karta hai jo API endpoints ko easily define karne me madad karte hain.
+                3. Authentication and Permissions:
+                    DRF multiple authentication methods aur permission classes support karta hai.
+                4. Browsable API:
+                    DRF ek browsable API interface provide karta hai jo developers ke liye API testing aur exploration ko asaan banata hai.
+        Example of Django REST Framework (DRF):
+'''            
 
-
-'''
-SECTION 4: Django / Backend Concepts
-================================================
-5. What is ORM?
-
-Django ORM ek Object Relational Mapper hai
-jo Python objects ke zariye database ke sath
-kaam karne deta hai.
-'''
-
-'''
-6. What is Method Overriding?
-
-Child class parent class ke method ko
-same name ke sath redefine karti hai.
-'''
-
-'''
-7. What is Decorator?
-
-Decorator ek function hota hai jo
-dusre function ki functionality ko
-bina change kiye enhance karta hai.
-
-Django me decorators use hote hain:
-- Authentication
-- Authorization
-- Permissions
-'''
-
-'''
-8. What is Middleware?
-
-Middleware Django ka component hai jo
-request aur response ke darmiyan kaam karta hai.
-
-Uses:
-- Authentication
-- Security (CSRF, XSS)
-- Logging
-- Performance optimization
-'''
-
-
-'''
-SECTION 5: Very Common Interview Questions
-================================================
-- Difference between class and object?
-- Encapsulation with example?
-- Difference between abstraction and encapsulation?
-- What is inheritance and why use it?
-- What is polymorphism in simple words?
-- Can polymorphism exist without inheritance?
-- What is constructor? Is it inherited?
-'''
-
-
-'''
-SECTION 6: Python-Specific OOP
-================================================
-- __init__
-- self
-- Instance vs class variables
-- Method overriding in Python
-'''
-
-
-'''
-SECTION 7: Job Description Reference
-================================================
-Job Title: Junior Django / Python Developer
-
-Requirements:
-- Python & Django (1+ year)
-- Django ORM
-- REST APIs (DRF)
-- PostgreSQL / MySQL
-- Git / GitHub
-- Authentication & Security
-
-Nice to Have:
-- Docker
-- AWS
-- Celery / Redis
-- CI/CD
-'''

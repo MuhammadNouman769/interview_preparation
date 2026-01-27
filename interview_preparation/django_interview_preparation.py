@@ -11,35 +11,35 @@ Version: 1.0
 
 1. Introduction to Python and Django
 
-    Python Kya Hai?:
-                   i). High-level programming language, easy syntax,
-                       used for web, data science, AI.
-                       
-                       Example:
-                            print("Hello World").
+Python Kya Hai?:
+i). High-level programming language, easy syntax,
+    used for web, data science, AI.
+    
+    Example:
+        print("Hello World").
 2. how many data type in python?
-                           python may kafi data type hain, jin may se kuch important data type yeh hain:
-                           i). Numeric data types:
-                                 -int: integer numbers, like 1, 2, 3.                           
-                                 -float: decimal numbers, like 1.2,3.12,
-                                 -complex: complex numbers, like 2+3j.
-                           ii). Sequence data types:
-                                       -list: ordered, mutable collection, like [1,2,3].
-                                       -tuple: ordered, immutable collection, like (1,2,3).
-                                       -range: sequence of numbers, like range(1,10).
-                          iii). Text data type:
-                                  -Strring: sequence of characters, like "Hello".
-                           iv). Set data type:
-                                -set: unordered, mutable collection of unique items, like {1,2,3}.
-                            v). Mapping data type:
-                                   -dectionary: key-value pairs, like {'a':1,'b':2}.
-                            vi). Boolean data type:
-                                      -bool: True or False values.
-                          vii). Binary data types:
-                                  -bytes: immutable sequence of bytes, like b'hello'.
-                                  -bytearray: mutable sequence of bytes, like bytearray(b'hello').
-                                  -memoryview: memory view object, like memoryview(b'hello').
-         Example:
+        python may kafi data type hain, jin may se kuch important data type yeh hain:
+        i). Numeric data types:
+                -int: integer numbers, like 1, 2, 3.                           
+                -float: decimal numbers, like 1.2,3.12,
+                -complex: complex numbers, like 2+3j.
+        ii). Sequence data types:
+                    -list: ordered, mutable collection, like [1,2,3].
+                    -tuple: ordered, immutable collection, like (1,2,3).
+                    -range: sequence of numbers, like range(1,10).
+        iii). Text data type:
+                -Strring: sequence of characters, like "Hello".
+        iv). Set data type:
+            -set: unordered, mutable collection of unique items, like {1,2,3}.
+        v). Mapping data type:
+                -dectionary: key-value pairs, like {'a':1,'b':2}.
+        vi). Boolean data type:
+                    -bool: True or False values.
+        vii). Binary data types:
+                -bytes: immutable sequence of bytes, like b'hello'.
+                -bytearray: mutable sequence of bytes, like bytearray(b'hello').
+                -memoryview: memory view object, like memoryview(b'hello').
+Example:
 '''
 # Numeric data types
 a = 10          # int
@@ -63,10 +63,10 @@ my_bytes = b'hello'          # bytes
 my_bytearray = bytearray(b'hello')  # bytearray
 my_memoryview = memoryview(b'hello') # memoryview
 '''
-    2.  what is mutable and immutable data types in python?
-                Mutable data types wo hote hain jin ki values ko change kiya ja sakta hai
-                Immutable data types wo hote hain jin ki values ko change nahi kiya ja sakta.
-                Example of Mutable data types:
+2.  what is mutable and immutable data types in python?
+        Mutable data types wo hote hain jin ki values ko change kiya ja sakta hai
+        Immutable data types wo hote hain jin ki values ko change nahi kiya ja sakta.
+        Example of Mutable data types:
 '''
 # Mutable data types
 my_list = [1, 2, 3]
@@ -79,7 +79,7 @@ my_set = {1, 2, 3}
 my_set.add(4)  # Adding an element to the set
 print(my_set)  # Output: {1, 2, 3, 4}
 '''
-                Example of Immutable data types:
+Example of Immutable data types:
 '''
 # Immutable data types
 my_tuple = (1, 2, 3)
@@ -92,10 +92,11 @@ my_int = 10
 # my_int[0] = 20  # This will raise an error
 print(my_int)  # Output: 10
 '''
-    3.  what is type casting in python?
-                Type casting aik process hai jisme hum aik data type ko dusre data type me convert karte hain.
-                Python me type casting do tarah se hoti hai: implicit aur explicit
-                Example of Implicit Type Casting:
+3.  what is type casting in python?
+        Type casting aik process hai jisme hum aik data 
+        type ko dusre data type me convert karte hain.
+        Python me type casting do tarah se hoti hai: implicit aur explicit
+        Example of Implicit Type Casting:
 '''
 # Implicit Type Casting
 a = 10        # int
@@ -104,7 +105,7 @@ c = a + b    # int + float = float
 print(c)     # Output: 13.14
 print(type(c))  # Output: <class 'float'>
 '''
-                Example of Explicit Type Casting:
+Example of Explicit Type Casting:
 '''
 # Explicit Type Casting
 a = 10        # int
@@ -115,41 +116,58 @@ c = str(a)    # int to string
 print(c)      # Output: '10'
 print(type(c))  # Output: <class 'str'>
 '''
-    4.  what is python functions?
-                Function aik reusable block of code hai jo specific task perform karta hai.
-                Function ko define karne ke liye def keyword use hota hai.
-                Function ko call karne ke liye function name ke sath parentheses use hoti hain.
-                Example:
+4. what is python functions?
+    i). Function aik reusable block of code 
+        hai jo specific task perform karta hai.
+   ii). Function ko define karne ke liye
+        def keyword use hota hai.
+  iii). Function ko call karne ke liye 
+        function name ke sath parentheses use hoti hain.
+    Example:
 '''
 def mera_function(name):
     print(f"Hello, {name}!")    
 mera_function("Nouman")  # Output: Hello, Nouman!
 '''
-    5.  what is lambda function in python?
-                Lambda function aik anonymous function hai jo single expression ko evaluate karta hai.
-                Lambda function ko define karne ke liye lambda keyword use hota hai.
-                Lambda function ko call karne ke liye function name ke sath parentheses use hoti hain.
-                Example:
+5. what is lambda function in python?
+    i). Lambda function aik anonymous
+        function hai jo single expression ko evaluate karta hai.
+    ii). Lambda function ko define karne
+         ke liye lambda keyword use hota hai.
+    iii). Lambda function ko call karne ke liye
+          function name ke sath parentheses use hoti hain.
+    Example:
 '''
 # Lambda function
 square = lambda x: x ** 2
 print(square(5))  # Output: 25
 '''
-    6.  what is difference between list and tuple in python?
-                List aur Tuple dono sequence data types hain jo multiple values ko store karte hain.
-                Lekin in dono me kuch differences hain:
-                1. Mutability:
-                        - List mutable hoti hai, yani iski values ko change kiya ja sakta hai.
-                        - Tuple immutable hoti hai, yani iski values ko change nahi kiya ja sakta.
-                2. Syntax:
-                        - List ko square brackets [] me define kiya jata hai.
-                        - Tuple ko parentheses () me define kiya jata hai.
-                3. Performance:
-                        - Tuple list se thodi fast hoti hai kyun ke ye immutable hoti hai.
-                4. Use Cases:
-                        - List ko jab values ko change karna ho tab use kiya jata hai.
-                        - Tuple ko jab values ko change nahi karna ho tab use kiya jata hai.
-                Example:
+6. what is difference between list
+   and tuple in python?
+     
+     List aur Tuple dono sequence data types
+     hain jo multiple values ko store karte hain.
+    
+     Lekin in dono me kuch differences hain:
+    1. Mutability:
+            - List mutable hoti hai,
+              yani iski values ko change kiya ja sakta hai.
+            - Tuple immutable hoti hai,
+              yani iski values ko change nahi kiya ja sakta.
+    2. Syntax:
+            - List ko square brackets []
+              me define kiya jata hai.
+            - Tuple ko parentheses () 
+              me define kiya jata hai.
+    3. Performance:
+            - Tuple list se thodi fast hoti hai
+              kyun ke ye immutable hoti hai.
+    4. Use Cases:
+            - List ko jab values ko change karna
+              ho tab use kiya jata hai.
+            - Tuple ko jab values ko change nahi
+              karna ho tab use kiya jata hai.
+    Example:
 '''
 # List example
 my_list = [1, 2, 3]
@@ -188,7 +206,7 @@ print("Shallow Copied List:", shallow_copied_list)  # Output: [1, 2, [30, 4]
 print("Deep Copied List:", deep_copied_list)      # Output: [1, 2, [3, 4]
 '''
 
-    
+
 2. Introduction to Django Framework      
     Django Kya Hai?:
                    i). Django ek high-level Python web framework hai jo fast,

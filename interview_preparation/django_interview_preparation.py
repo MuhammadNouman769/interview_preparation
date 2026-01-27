@@ -17,7 +17,179 @@ Version: 1.0
                        
                        Example:
                             print("Hello World").
-                            
+2. how many data type in python?
+                           python may kafi data type hain, jin may se kuch important data type yeh hain:
+                           i). Numeric data types:
+                                 -int: integer numbers, like 1, 2, 3.                           
+                                 -float: decimal numbers, like 1.2,3.12,
+                                 -complex: complex numbers, like 2+3j.
+                           ii). Sequence data types:
+                                       -list: ordered, mutable collection, like [1,2,3].
+                                       -tuple: ordered, immutable collection, like (1,2,3).
+                                       -range: sequence of numbers, like range(1,10).
+                          iii). Text data type:
+                                  -Strring: sequence of characters, like "Hello".
+                           iv). Set data type:
+                                -set: unordered, mutable collection of unique items, like {1,2,3}.
+                            v). Mapping data type:
+                                   -dectionary: key-value pairs, like {'a':1,'b':2}.
+                            vi). Boolean data type:
+                                      -bool: True or False values.
+                          vii). Binary data types:
+                                  -bytes: immutable sequence of bytes, like b'hello'.
+                                  -bytearray: mutable sequence of bytes, like bytearray(b'hello').
+                                  -memoryview: memory view object, like memoryview(b'hello').
+         Example:
+'''
+# Numeric data types
+a = 10          # int
+b = 3.14       # float
+c = 2 + 3j     # complex
+# Sequence data types
+my_list = [1, 2, 3]          # list
+my_tuple = (1, 2, 3)         # tuple
+my_range = range(1, 10)      # range
+# Text data type
+my_string = "Hello, World!"  # string
+# Set data type
+my_set = {1, 2, 3}           # set
+# Mapping data type
+my_dict = {'a': 1, 'b': 2}   # dictionary
+# Boolean data type
+is_true = True                # bool
+is_false = False              # bool
+# Binary data types
+my_bytes = b'hello'          # bytes
+my_bytearray = bytearray(b'hello')  # bytearray
+my_memoryview = memoryview(b'hello') # memoryview
+'''
+    2.  what is mutable and immutable data types in python?
+                Mutable data types wo hote hain jin ki values ko change kiya ja sakta hai
+                Immutable data types wo hote hain jin ki values ko change nahi kiya ja sakta.
+                Example of Mutable data types:
+'''
+# Mutable data types
+my_list = [1, 2, 3]
+my_list[0] = 10  # Changing the first element
+print(my_list)   # Output: [10, 2, 3]
+my_dict = {'a': 1, 'b': 2}
+my_dict['a'] = 10  # Changing the value for key 'a'
+print(my_dict)     # Output: {'a': 10, 'b': 2}
+my_set = {1, 2, 3}
+my_set.add(4)  # Adding an element to the set
+print(my_set)  # Output: {1, 2, 3, 4}
+'''
+                Example of Immutable data types:
+'''
+# Immutable data types
+my_tuple = (1, 2, 3)
+# my_tuple[0] = 10  # This will raise an error
+print(my_tuple)  # Output: (1, 2, 3)
+my_string = "Hello"
+# my_string[0] = "h"  # This will raise an error
+print(my_string)  # Output: Hello
+my_int = 10
+# my_int[0] = 20  # This will raise an error
+print(my_int)  # Output: 10
+'''
+    3.  what is type casting in python?
+                Type casting aik process hai jisme hum aik data type ko dusre data type me convert karte hain.
+                Python me type casting do tarah se hoti hai: implicit aur explicit
+                Example of Implicit Type Casting:
+'''
+# Implicit Type Casting
+a = 10        # int
+b = 3.14      # float
+c = a + b    # int + float = float
+print(c)     # Output: 13.14
+print(type(c))  # Output: <class 'float'>
+'''
+                Example of Explicit Type Casting:
+'''
+# Explicit Type Casting
+a = 10        # int
+b = float(a)  # int to float
+print(b)      # Output: 10.0
+print(type(b))  # Output: <class 'float'>
+c = str(a)    # int to string
+print(c)      # Output: '10'
+print(type(c))  # Output: <class 'str'>
+'''
+    4.  what is python functions?
+                Function aik reusable block of code hai jo specific task perform karta hai.
+                Function ko define karne ke liye def keyword use hota hai.
+                Function ko call karne ke liye function name ke sath parentheses use hoti hain.
+                Example:
+'''
+def mera_function(name):
+    print(f"Hello, {name}!")    
+mera_function("Nouman")  # Output: Hello, Nouman!
+'''
+    5.  what is lambda function in python?
+                Lambda function aik anonymous function hai jo single expression ko evaluate karta hai.
+                Lambda function ko define karne ke liye lambda keyword use hota hai.
+                Lambda function ko call karne ke liye function name ke sath parentheses use hoti hain.
+                Example:
+'''
+# Lambda function
+square = lambda x: x ** 2
+print(square(5))  # Output: 25
+'''
+    6.  what is difference between list and tuple in python?
+                List aur Tuple dono sequence data types hain jo multiple values ko store karte hain.
+                Lekin in dono me kuch differences hain:
+                1. Mutability:
+                        - List mutable hoti hai, yani iski values ko change kiya ja sakta hai.
+                        - Tuple immutable hoti hai, yani iski values ko change nahi kiya ja sakta.
+                2. Syntax:
+                        - List ko square brackets [] me define kiya jata hai.
+                        - Tuple ko parentheses () me define kiya jata hai.
+                3. Performance:
+                        - Tuple list se thodi fast hoti hai kyun ke ye immutable hoti hai.
+                4. Use Cases:
+                        - List ko jab values ko change karna ho tab use kiya jata hai.
+                        - Tuple ko jab values ko change nahi karna ho tab use kiya jata hai.
+                Example:
+'''
+# List example
+my_list = [1, 2, 3]
+my_list[0] = 10  # Changing the first element
+print(my_list)   # Output: [10, 2, 3]
+# Tuple example
+my_tuple = (1, 2, 3)
+# my_tuple[0] = 10  # This will raise an error
+print(my_tuple)  # Output: (1, 2, 3)
+'''
+    7.  what is difference between deep copy and shallow copy in python?
+                Deep Copy aur Shallow Copy dono objects ki copies banate hain,
+                lekin in dono me kuch differences hain:
+                1. Shallow Copy:
+                        - Shallow Copy ek naya object banata hai jo original object ke references ko point karta hai.
+                        - Agar original object ke andar koi mutable object hai aur usko change kiya jata hai,
+                          to shallow copy me bhi wo change reflect hota hai.
+                2. Deep Copy:
+                        - Deep Copy ek naya object banata hai jo original object ke tamam nested objects ki
+                          bhi copies banata hai.
+                        - Agar original object ke andar koi mutable object hai aur usko change kiya jata hai,
+                          to deep copy me wo change reflect nahi hota.
+                Example:
+'''
+import copy
+# Original list with nested list
+original_list = [1, 2, [3, 4]]
+# Shallow Copy
+shallow_copied_list = copy.copy(original_list)
+# Deep Copy
+deep_copied_list = copy.deepcopy(original_list)
+# Modifying the nested list in original list
+original_list[2][0] = 30
+print("Original List:", original_list)           # Output: [1, 2, [30, 4]
+print("Shallow Copied List:", shallow_copied_list)  # Output: [1, 2, [30, 4]
+print("Deep Copied List:", deep_copied_list)      # Output: [1, 2, [3, 4]
+'''
+
+    
+2. Introduction to Django Framework      
     Django Kya Hai?:
                    i). Django ek high-level Python web framework hai jo fast,
                        secure aur scalable web applications banane ke liye use hota hai.
@@ -203,25 +375,25 @@ mera_apna_for_loop(c)
 mera_apna_for_loop(d)
 mera_apna_for_loop(e)   
 '''
-output:
-1
-2
-3
-4       
-5
-1                       
-.
-.
-.
+    output:
+    1
+    2
+    3
+    4       
+    5
+    1                       
+    .
+    .
+    .
 
-3. what is iterator?
-        Iterator ek object hota hai jo iterable objects ko iterate karta hai.
-         usecases of iterator?
-                - Looping through data structures (list, tuple, dictionary, set)
-                - Data processing
-                - Generating sequences
-                - Implementing algorithms
-        Example:
+    3. what is iterator?
+            Iterator ek object hota hai jo iterable objects ko iterate karta hai.
+            usecases of iterator?
+                    - Looping through data structures (list, tuple, dictionary, set)
+                    - Data processing
+                    - Generating sequences
+                    - Implementing algorithms
+            Example:
 '''
 def mera_apna_iterator(iterable):
     iterator = iter(iterable)
@@ -496,7 +668,7 @@ child.child_method()  # Child method
                         jo different parameters accept karte hain.
                         Python me method overloading directly support nahi hoti,
                         lekin hum default arguments ya *args, **kwargs ka use karke achieve kar sakte hain. 
-                         
+
                     Example:
                     '''
 class Dog:

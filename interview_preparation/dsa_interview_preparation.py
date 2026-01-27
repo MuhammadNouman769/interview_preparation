@@ -6,4 +6,6 @@
              DSA
       Interview Preparation
 ================================== 
-'''  
+'''
+b=23
+print(b)

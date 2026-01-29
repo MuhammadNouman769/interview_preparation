@@ -93,8 +93,10 @@ i).High-level programming language, easy syntax,
           concise way to create lists.
           Example:
           [x for x in range(10) if x % 2 == 0]
-    ix.  - what is deffrence betwwen indexing and slicing?
-                      
+    ix. what is deffrence betwwen indexing and slicing?
+       Indexing se hum sequence me sirf ek element access
+       karte hain, jab ke slicing se hum ek range select karke
+       naya sequence return karte hain.
 
 
 Example:
@@ -122,10 +124,10 @@ my_bytearray = bytearray(b'hello')  # bytearray
 my_memoryview = memoryview(b'hello') # memoryview
 '''
 2.  what is mutable and immutable data types in python?
-        Mutable data types wo hote hain
-        jin ki values ko change kiya ja sakta hai
-        Immutable data types wo hote hain
-        jin ki values ko change nahi kiya ja sakta.
+      i. Mutable data types wo hote hain
+         jin ki values ko change kiya ja sakta hai
+     ii. Immutable data types wo hote hain
+         jin ki values ko change nahi kiya ja sakta.
         Example of Mutable data types:
 '''
 # Mutable data types
@@ -950,7 +952,6 @@ Child class method
     __init__ method ek special method hai jo class
     ka object create hone par automatically call
     hota hai.Iska use object ki 
-    
     initial state set karne ke liye hota hai.
 Example:
         '''

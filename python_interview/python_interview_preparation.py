@@ -1155,6 +1155,10 @@ print(squares)  # Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
         Normalization ke different levels hote hain,
         jise normal forms kehte hain (1NF, 2NF, 3NF, BCNF).
         Example of Normalization:
+        
+        1NF: Har cell atomic ho aur repeating group na ho;
+        2NF: Har non-key column poore primary key pe depend kare;
+        3NF: Non-key column sirf primary key pe depend kare, dusre column pe nahi.
 '''
 # Unnormalized Table
 '''
@@ -1208,6 +1212,23 @@ StudentID | CourseID
 2         | 1
 2         | 3
 
+29. what is time complexity 
+    Time Complexity ek DSA concept hai jo
+    batata hai ke input size ke hisaab se
+    algorithm ya code ko run karne me kitna time lagega.
+30. what is space complexity 
+    Space Complexity algorithm ki memory requirement ka measure hai,
+    jo batata hai input size ke hisaab se kitni memory chahiye.    
+
+31. what is Queue?
+    Queue ek linear data structure hai jo  
+    (FIFO) principle pe kaam karta hai.
+    First In, First Out       
+
+32. what is garbage collector?
+    Garbage Collection Python ka automatic memory
+    management system hai jo unused objects ko delete
+    karke memory free karta hai.
 what is REST APIs (DRF)?:
         REST (Representational State Transfer) APIs aik architectural style hai
         jo web services banane ke liye use hota hai.

@@ -80,16 +80,46 @@
 
 # asyncio.run(main())
 
-import threading
-import time 
-def cpu_bound_task():
-    count = 1
-    for _ in range(10**7):
-        count += 1
-threads = []
-for i in range(4):
-    thread = threading.Thread(target=cpu_bound_task)
-    threads.append(thread)
-    thread.start()
-for thread in threads:
-    thread.join()
+# import threading
+# import time 
+# def cpu_bound_task():
+#     count = 1
+#     for _ in range(10**7):
+#         count += 1
+# threads = []
+# for i in range(4):
+#     thread = threading.Thread(target=cpu_bound_task)
+#     threads.append(thread)
+#     thread.start()
+# for thread in threads:
+#     thread.join()
+
+# list = [x for x in range(10) if x % 1 == 0]
+# squares = [x*2 for x in range(10)]
+# print(list)
+
+
+# import time
+# def task1():
+#     print("Task 1 start")
+#     time.sleep(2)
+#     print("Task 1 done")
+# def task2():
+#     print("Task 2 start")
+#     #time.sleep(1)
+#     print("Task 2 done")
+# task1()
+# task2()
+
+import asyncio
+async def task1():
+    print("Task 1 start")
+    await asyncio.sleep(2)
+    print("Task 1 done")
+async def task2():
+    print("Task 2 start")   
+    await asyncio.sleep(1)
+    print("Task 2 done")
+async def main():
+    await asyncio.gather(task1(), task2())
+asyncio.run(main())

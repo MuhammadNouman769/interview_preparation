@@ -13,74 +13,88 @@ Date: [22/january/2026]
 Version: 1.0
 
 
-1. Introduction to Python and Django
+1.Introduction to Python and Django
 
 what is Python?:
-i). High-level programming language, easy syntax,
-    used for web, data science, AI.
+i).High-level programming language, easy syntax,
+   used for web, data science, AI.
     
     Example:
         print("Hello World").
 
-2. how many data type in python?
-    python may kafi data type hain,
-    jin may se kuch important data
-    type hain jin ko hum mukhtalif categories
-    may divide kar saktay hain:
+2.how many data type in python?
+  python may kafi data type hain,
+  jin may se kuch important data
+  type hain jin ko hum mukhtalif
+  categories may divide kar saktay hain:
     like
     
     i).Numeric data types:
         -int: integer numbers, like 1, 2, 3.                           
         -float: decimal numbers, like 1.2, 3.12,
         -complex: complex numbers, like 2+3j.
-                interview Answer:
-                    Numeric data types wo hotay hain jin mein numbers store kiye jate hain,
-                    aur Python mein built-in numeric data types int, float aur complex hain.
+          interview Answer:
+          Numeric data types wo hotay hain jin mein
+          numbers store kiye jate hain,
+          aur Python mein built-in numeric
+          data types int, float aur complex hain.
    ii).Sequence data types:
          -list: ordered, mutable collection, like [1,2,3].
          -tuple: ordered, immutable collection, like (1,2,3).
          -range: sequence of numbers, like range(1,10).
-               interview Answer:
-                    Sequence data types wo hotay hain jin mein data
-                    ordered hota hai aur index ke zariye access kiya jata hai.
+            interview Answer:
+            Sequence data types wo hotay
+            hain jin mein data
+            ordered hota hai aur index ke
+            zariye access kiya jata hai.
 
   iii).Text data type:
-         -Strring: sequence of characters, like "Hello".
+        -Strring: sequence of characters, like "Hello".
    iv).Set data type:
-         -set: unordered, mutable collection of unique items, like {1,2,3}.
-              interview Answer:
-                    Set data type wo hota hai jo unordered aur mutable
-                    collection of unique items ko store karta hai,
-                    aur Python mein built-in set data type set hai.
+        -set: unordered, mutable collection of unique items, like {1,2,3}.
+         interview Answer: 
+         Set data type wo hota hai jo unordered aur mutable
+         collection of unique items ko store karta hai,
+         aur Python mein built-in set data type set hai.
     v).Mapping data type:
-         -dectionary: key-value pairs, like {'a':1,'b':2}.
-           interview Answer:
-                    Mapping data type wo hota hai jo key–value pairs mein data store karta hai,
-                    aur Python mein built-in mapping data type dictionary hai.
+        -dectionary: key-value pairs, like {'a':1,'b':2}.
+        interview Answer: 
+         Mapping data type wo hota hai
+         jo key–value pairs mein data store karta hai,
+         aur Python mein built-in mapping data type dictionary hai.
    vi).Boolean data type:
-         -bool: True or False values.
-              interview Answer:
-                    Boolean data type wo hota hai jo sirf do values ko represent karta hai: True aur False,
-                    aur Python mein built-in boolean data type bool hai.
+        -bool: True or False values.
+          interview Answer:
+          Boolean data type wo hota hai
+          jo sirf do values ko represent
+          karta hai: True aur False,
+          aur Python mein built-in boolean data type bool hai.
 
   vii).Binary data types:
         -bytes: immutable sequence of bytes, like b'hello'.
         -bytearray: mutable sequence of bytes, like bytearray(b'hello').
         -memoryview: memory view object, like memoryview(b'hello').
-                interview Answer:
-                        Binary data types wo hotay hain jo binary data ko represent karte hain,
-                        aur Python mein built-in binary data types bytes, bytearray hain.
-                    
-                    memoryview ek object hai jo binary data ko bina copy banaye access karta hai,
-                    is se performance aur memory efficient hoti hai.    
+         interview Answer:
+          Binary data types wo hotay hain
+          jo binary data ko represent karte hain,
+           aur Python mein built-in binary data
+           types bytes, bytearray hain.         
+            memoryview ek object hai jo binary data
+            ko bina copy banaye access karta hai,
+            is se performance aur memory efficient hoti hai.    
 
   viii. Big picture (complete data types recap)
-            -Numeric → int, float, complex
-            -Sequence → list, tuple, string, range
-            -Set → set
-            -Mapping → dict
-            -Boolean → True / False
-            -Binary → bytes, bytearray
+        -Numeric → int, float, complex
+        -Sequence → list, tuple, string, range
+        -Set → set
+        -Mapping → dict
+        -Boolean → True / False
+        -Binary → bytes, bytearray
+          concise way to create lists.
+          Example:
+          [x for x in range(10) if x % 2 == 0]
+    ix.  - what is deffrence betwwen indexing and slicing?
+                      
 
 
 Example:
@@ -108,8 +122,10 @@ my_bytearray = bytearray(b'hello')  # bytearray
 my_memoryview = memoryview(b'hello') # memoryview
 '''
 2.  what is mutable and immutable data types in python?
-        Mutable data types wo hote hain jin ki values ko change kiya ja sakta hai
-        Immutable data types wo hote hain jin ki values ko change nahi kiya ja sakta.
+        Mutable data types wo hote hain
+        jin ki values ko change kiya ja sakta hai
+        Immutable data types wo hote hain
+        jin ki values ko change nahi kiya ja sakta.
         Example of Mutable data types:
 '''
 # Mutable data types
@@ -137,19 +153,29 @@ my_int = 10
 print(my_int)  # Output: 10
 '''
 3.  what is type casting in python?
-        Type casting aik process hai jisme hum aik data 
-        type ko dusre data type me convert karte hain.
-        Python me type casting do tarah se hoti hai: implicit aur explicit
-        Example of Implicit Type Casting:
-'''
-# Implicit Type Casting
+    Type casting aik process hai jisme hum aik data 
+    type ko dusre data type me convert karte hain.
+    Python me type casting do tarah se hoti hai: implicit aur explicit
+
+    i).Implicit Type Casting:
+        Implicit type casting me Python
+        automatically aik data type ko
+        dusre data type me convert kar deta hai
+        jab zarurat hoti hai.
+        Example:
+'''# Implicit Type Casting
 a = 10        # int
 b = 3.14      # float
 c = a + b    # int + float = float
 print(c)     # Output: 13.14
 print(type(c))  # Output: <class 'float'>
 '''
-Example of Explicit Type Casting:
+    ii).Explicit Type Casting:
+        Explicit type casting me hum
+        manually aik data type ko
+        dusre data type me convert karte hain
+        using built-in functions jaise int(), float(), str(), etc.
+        Example of Implicit Type Casting:
 '''
 # Explicit Type Casting
 a = 10        # int
@@ -601,13 +627,13 @@ child.grandparent_method()  # GrandParent method
 child.parent_method()       # Parent method
 child.child_method()        # Child method
 '''
-     iii.what is multiple Inheritance?:
-           Multiple Inheritance me aik child class ek
-           se zyada parent classes se inherit karti hai.
-           Is me child class multiple classes ki properties 
-           aur methods use kar sakti hai.
-       Example:
-                  '''
+    iii.what is multiple Inheritance?:
+        Multiple Inheritance me aik child class ek
+        se zyada parent classes se inherit karti hai.
+        Is me child class multiple classes ki properties 
+        aur methods use kar sakti hai.
+    Example:
+                '''
 class ParentOne:
     def method_one(self):
         print("Method from Parent One")
@@ -632,7 +658,8 @@ iii) what is  Polymorphism?
             - Method Overloading
             - Method Overriding
         i) what is Method Overloading?
-            Method Overloading same class me same methods ko deffrent parameter k lia use krna  versions hote hain
+            Method Overloading same class me same methods ko
+            deffrent parameter k lia use krna  versions hote hain
             jo different parameters accept karte hain.
             Python me method overloading directly support nahi hoti,
             lekin hum default arguments ya *args, **kwargs ka use karke achieve kar sakte hain.
@@ -727,7 +754,7 @@ mera_function_kwargs(a=1, b=2, c=3)
 Output:
 a: 1
 b: 2
-c: 3: 3
+c: 3
 
 
 
@@ -868,17 +895,20 @@ for process in processes:
     process.join()
 '''
 
-            10. What is Middleware?
-                Middleware Django ka component hai jo request aur response ke beech processing ka kaam karta hai.
-                Middleware ek tarah ka bridge hai jo Django application aur web server ke beech hota hai.
-                Middleware request ko process karta hai before it reaches the view,
-                aur response ko process karta hai before it is sent to the client.
-                Middleware ka use common tasks ke liye hota hai jaise:
-                    - Authentication
-                    - Security (CSRF, XSS)
-                    - Logging
-                    - Performance optimization
-                Example:
+17. What is Middleware?
+    Middleware Django ka component hai
+    jo request aur response ke beech 
+    processing ka kaam karta hai.
+    Middleware ek tarah ka bridge hai
+    jo Django application aur web server
+    ke beech hota hai.
+   
+    Middleware ka use common tasks ke liye hota hai jaise:
+    - Authentication
+    - Security (CSRF, XSS)
+    - Logging
+    - Performance optimization
+    Example:
 '''
 class SimpleMiddleware:
     def __init__(self, get_response):
@@ -897,10 +927,11 @@ class SimpleMiddleware:
 
 
 '''
-                11. what is  method overriding in Python?
-                        Method Overriding me child class parent class ke method ko redefine karke
-                        apna behavior implement karti hai.
-                              
+18. what is  method overriding in Python?
+    Method Overriding me child class parent
+    class ke method ko redefine karke
+    apna behavior implement karti hai.
+                
         Example:
 '''
 class ParentClass:
@@ -914,11 +945,14 @@ child.show()  # Child class method
 '''
 Output:
 Child class method
-                                 
-            12.  what is __init__ Method?
-                    __init__ method ek special method hai jo class ka object create hone
-                    par automatically call hota hai.Iska use object ki initial state set karne ke liye hota hai.
-        Example:
+                    
+19. what is __init__ Method?
+    __init__ method ek special method hai jo class
+    ka object create hone par automatically call
+    hota hai.Iska use object ki 
+    
+    initial state set karne ke liye hota hai.
+Example:
         '''
 class Student:
     def __init__(self, name, age):
@@ -934,28 +968,29 @@ Asif
 20
 ''' 
 '''
-                     what is Django ORM?
-                                Django ORM (Object-Relational Mapper) Django ka built-in powerful feature hai
-                                jo Python classes ke through database operations simplify karta hai.
-                                        Developers ko direct SQL queries likhne ki zarurat nahi hoti
-                                        ORM automatically database ke saath interact karta hai 
-                            Key Features of Django ORM
-                                  1 database:
-                                        Django ORM multiple databases support karta hai
-                                        jaise SQLite, PostgreSQL, MySQL, Oracle.
-                                  2. Model Definition:
-                                        Django ORM me models Python classes hoti hain
-                                        jo database tables ko represent karti hain.
-                                  3. QuerySet API:
-                                        Django ORM QuerySet API provide karta hai
-                                        jo database queries ko Python code ke zariye likhne ki sahulat deta hai.
-                                  4. Relationships Handling:
-                                        Django ORM foreign keys, many-to-many relationships
-                                        aur one-to-one relationships ko easily handle karta hai.
-                                  5. Migrations:
-                                        Django ORM database schema changes ko manage karne ke liye
-                                        migrations ka use karta hai.
-                    Example of Django ORM:
+20.what is Django ORM?
+    Django ORM (Object-Relational Mapper)
+    Django ka built-in powerful feature hai
+    jo Python classes ke through database operations simplify karta hai.
+        Developers ko direct SQL queries likhne ki zarurat nahi hoti
+        ORM automatically database ke saath interact karta hai 
+Key Features of Django ORM
+            1 database:
+                Django ORM multiple databases support karta hai
+                jaise SQLite, PostgreSQL, MySQL, Oracle.
+            2. Model Definition:
+                Django ORM me models Python classes hoti hain
+                jo database tables ko represent karti hain.
+            3. QuerySet API:
+                Django ORM QuerySet API provide karta hai
+                jo database queries ko Python code ke zariye likhne ki sahulat deta hai.
+            4. Relationships Handling:
+                Django ORM foreign keys, many-to-many relationships
+                aur one-to-one relationships ko easily handle karta hai.
+            5. Migrations:
+                Django ORM database schema changes ko manage karne ke liye
+                migrations ka use karta hai.
+Example of Django ORM:
 '''
 from django.db import models
 class Book(models.Model):
@@ -970,6 +1005,209 @@ books = Book.objects.filter(author="John Doe")
 for book in books:
     print(book.title)
  '''       
+21.what is migrations in Django?
+    Migration Django ka system hai jo models
+    ke changes ko database schema mein safely apply karta hai.
+    Key Features of Django Migrations:
+        1. Automatic Generation:
+            Django migrations automatically generate hoti hain
+            jab hum apne models me changes karte hain.
+        2. Version Control:
+            Migrations database schema changes ko version control karti hain,
+            jisse hum easily changes ko track kar sakte hain.
+        3. Rollback Support:
+            Migrations me rollback support hota hai,
+            jisse hum previous schema state par wapas ja sakte hain.
+        4. Dependency Management:
+            Migrations dependencies ko manage karti hain,
+            jisse changes correct order me apply hoti hain.
+    Example of Django Migrations:
+
+what is migrate?
+      Migrate migration files ko database schema mein apply karta hai.
+22.what is schema?
+      Schema database ka structure hota hai jo tables,
+      fields, relationships ko define karta hai.
+
+23.how many types of relationships are there in django?
+        Django me 3 types of relationships hoti hain:
+        1. One-to-One Relationship
+        2. One-to-Many Relationship
+        3. Many-to-Many Relationship
+    
+    i).one-to-one relationship in django?
+            One-to-One relationship me ek model ka ek record
+            sirf dusre model ke ek record se linked hota hai.
+            Example:     
+'''    
+from django.db import models
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+class Profile(models.Model):
+    author = models.OneToOneField(Author, on_delete=models.CASCADE)
+    bio = models.TextField()
+
+'''
+    ii).one-to-many relationship in django?
+            One-to-Many relationship me ek model ka ek record
+            multiple records se linked hota hai.
+            Example:
+'''
+from django.db import models
+class AuthorOneToMany(models.Model):
+    name = models.CharField(max_length=100)
+class BookOneToMany(models.Model):  
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(AuthorOneToMany, on_delete=models.CASCADE)       
+'''
+    iii).many-to-many relationship in django?
+            Many-to-Many relationship me ek model ke multiple records
+            dusre model ke multiple records se linked hote hain.
+            Example:
+'''
+from django.db import models
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+class Course(models.Model):
+    title = models.CharField(max_length=100)
+    students = models.ManyToManyField(Student)
+'''24.what is select_related and prefetch_related in django?
+    i).select_related:
+        select_related foreign key aur one-to-one relationships
+        ke liye use hota hai.
+        Ye SQL join use karke related objects ko
+        single query me fetch karta hai.
+    Example:
+'''
+# Using select_related
+books = Book.objects.select_related('author').all()
+for book in books:
+    print(book.title, book.author.name)
+'''
+    ii).prefetch_related:
+        prefetch_related many-to-many aur reverse foreign key relationships
+        ke liye use hota hai.
+        Ye separate queries use karke related objects ko fetch karta hai
+        aur phir Python me unhe combine karta hai.
+    Example:
+'''
+# Using prefetch_related
+authors = Author.objects.prefetch_related('book_set').all()
+for author in authors:
+    for book in author.book_set.all():
+        print(author.name, book.title)  
+'''25.what is n+1 problem in django?
+        N+1 problem ek performance issue hai
+        jo tab hota hai jab ek query ke baad
+        related objects ke liye additional queries execute hoti hain.
+        Isse database me unnecessary load badhta hai
+        aur application slow ho jata hai.
+        Example of N+1 Problem:
+'''
+# N+1 problem example
+books = Book.objects.all()
+for book in books:
+    print(book.title, book.author.name)  # Additional query for each book
+'''
+        Solution using select_related:
+'''
+# Solution using select_related
+books = Book.objects.select_related('author').all()
+for book in books:
+    print(book.title, book.author.name)  # Single query for all books and authors
+'''
+26.what is transaction in django?
+   Transaction database operations ka ek 
+   unit hai jo all-or-nothing principle pe kaam karta hai,
+    Key Features of Django Transactions:
+        1. Atomicity:
+            Transactions atomic hoti hain,
+            yani ya to saare operations successful hote hain
+            ya koi bhi operation nahi hota.
+        2. Consistency:
+            Database hamesha valid state me rahe.
+        3. Isolation:
+            Ek transaction dusre transaction ko disturb na kare
+        4. Durability:
+            Commit hone ke baad changes permanent ho jate hain.
+    Example of Django Transactions:
+'''
+from django.db import transaction   
+@transaction.atomic
+def transfer_funds(account_from, account_to, amount):
+    account_from.balance -= amount
+    account_to.balance += amount
+    account_from.save()
+    account_to.save()
+'''27. what is list comprehension in python?
+    List comprehension ek short-hand way
+    hai list banane ka, for loop ke sath condition apply karke
+    Example of List Comprehension:
+'''
+# Using list comprehension to create a list of squares
+squares = [x**2 for x in range(1, 11)]
+print(squares)  # Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+'''
+28. what is normalization in database?
+        Normalization database design ka process hai
+        jisme data ko organize kiya jata hai
+        taake redundancy kam ho aur data integrity maintain rahe.
+        Normalization ke different levels hote hain,
+        jise normal forms kehte hain (1NF, 2NF, 3NF, BCNF).
+        Example of Normalization:
+'''
+# Unnormalized Table
+'''
+StudentID | StudentName | Course1 | Course2
+----------------------------------------------      
+1         | Ali         | Math    | Science
+2         | Sara        | Math    | History
+'''
+# First Normal Form (1NF)
+'''
+StudentID | StudentName | Course
+--------------------------------------
+1         | Ali         | Math
+1         | Ali         | Science
+2         | Sara        | Math
+2         | Sara        | History
+'''
+# Second Normal Form (2NF)
+'''
+Students Table:     
+StudentID | StudentName
+------------------------
+1         | Ali         
+2         | Sara    
+Courses Table:
+StudentID | Course
+----------------------
+1         | Math
+1         | Science
+2         | Math
+2         | History
+'''
+# Third Normal Form (3NF)
+'''
+Students Table:
+StudentID | StudentName
+------------------------
+1         | Ali         
+2         | Sara    
+Courses Table:
+CourseID | CourseName
+------------------------
+1        | Math
+2        | Science
+3        | History
+Enrollments Table:
+StudentID | CourseID
+------------------------
+1         | 1
+1         | 2
+2         | 1
+2         | 3
+
 what is REST APIs (DRF)?:
         REST (Representational State Transfer) APIs aik architectural style hai
         jo web services banane ke liye use hota hai.

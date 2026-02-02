@@ -16,23 +16,24 @@ Version: 1.0
 1.Introduction to Python and Django
 
 what is Python?:
-i).High-level programming language, easy syntax,
-   used for web, data science, AI.
+i).python aik High-level programming language hai,
+   easy syntax, used for web, data science, AI.
     
     Example:
-        print("Hello World").
+        print("Hello Nouman").
 
 2.how many data type in python?
-  python may kafi data type hain,
-  jin may se kuch important data
-  type hain jin ko hum mukhtalif
-  categories may divide kar saktay hain:
-    like
-    
+    python may kafi data type hain,
+    jin may se kuch important data
+    type hain jin ko hum mukhtalif
+    categories may divide kar saktay hain
+        like:
+        
     i).Numeric data types:
         -int: integer numbers, like 1, 2, 3.                           
         -float: decimal numbers, like 1.2, 3.12,
         -complex: complex numbers, like 2+3j.
+        
           interview Answer:
           Numeric data types wo hotay hain jin mein
           numbers store kiye jate hain,
@@ -42,6 +43,7 @@ i).High-level programming language, easy syntax,
          -list: ordered, mutable collection, like [1,2,3].
          -tuple: ordered, immutable collection, like (1,2,3).
          -range: sequence of numbers, like range(1,10).
+        
             interview Answer:
             Sequence data types wo hotay
             hain jin mein data
@@ -52,18 +54,21 @@ i).High-level programming language, easy syntax,
         -Strring: sequence of characters, like "Hello".
    iv).Set data type:
         -set: unordered, mutable collection of unique items, like {1,2,3}.
+        
          interview Answer: 
          Set data type wo hota hai jo unordered aur mutable
          collection of unique items ko store karta hai,
          aur Python mein built-in set data type set hai.
     v).Mapping data type:
         -dectionary: key-value pairs, like {'a':1,'b':2}.
+        
         interview Answer: 
          Mapping data type wo hota hai
          jo key–value pairs mein data store karta hai,
          aur Python mein built-in mapping data type dictionary hai.
    vi).Boolean data type:
         -bool: True or False values.
+         
           interview Answer:
           Boolean data type wo hota hai
           jo sirf do values ko represent
@@ -74,6 +79,7 @@ i).High-level programming language, easy syntax,
         -bytes: immutable sequence of bytes, like b'hello'.
         -bytearray: mutable sequence of bytes, like bytearray(b'hello').
         -memoryview: memory view object, like memoryview(b'hello').
+         
          interview Answer:
           Binary data types wo hotay hain
           jo binary data ko represent karte hain,
@@ -123,7 +129,7 @@ my_bytes = b'hello'          # bytes
 my_bytearray = bytearray(b'hello')  # bytearray
 my_memoryview = memoryview(b'hello') # memoryview
 '''
-2.  what is mutable and immutable data types in python?
+2. what is mutable and immutable data types in python?
       i. Mutable data types wo hote hain
          jin ki values ko change kiya ja sakta hai
      ii. Immutable data types wo hote hain
@@ -197,7 +203,7 @@ print(type(c))  # Output: <class 'str'>
         function name ke sath parentheses use hoti hain.
     Example:
 '''
-def mera_function(name):
+def mera_function(name): # type: ignore
     print(f"Hello, {name}!")    
 mera_function("Nouman")  # Output: Hello, Nouman!
 '''
@@ -445,7 +451,7 @@ print(next(iterator))  # prints 3
 
         Example:
 '''
-def mera_generator():
+def mera_generator(): # pyright: ignore[reportRedeclaration]
     yield 1
     yield 2
     yield 3
@@ -512,7 +518,7 @@ def mera_decorator(func):
         print("Function call ho chuka hai")
     return wrapper
 @mera_decorator
-def mera_function():
+def mera_function(): # type: ignore
     print("Hello World")
 mera_function() 
 '''
@@ -550,14 +556,19 @@ i. What are the main pillars of OOP?
         methods ko aik class me band karna 
         aur data ko direct access se protect karna.
         encapsulation se data security aur integrity ensure hoti hai.
-  ii). what is getter and setter?
+        
+   ii).why secure data and methods 
+       Data aur methods ko is liye secure karte hain
+       taake unauthorized access na ho, data safe rahe
+       aur sirf controlled tareeqay se modify ho      
+  iii). what is getter and setter?
         getter aur setter methods encapsulation ka part hain.                                       
-            why using getters and setters?.
-                Getter aur Setter methods, encapsulation me private data
-                ko access aur modify karne ke liye use hote hain.
-                    i). Getter private variable ki value read / get karne ke liye hota hai
-                    ii). Setter private variable ki value update / change karne ke liye hota hai
-            Example:
+        why using getters and setters?.
+        Getter aur Setter methods, encapsulation me private data
+        ko access aur modify karne ke liye use hote hain.
+            i). Getter private variable ki value read / get karne ke liye hota hai
+           ii). Setter private variable ki value update / change karne ke liye hota hai
+          Example:
 '''
 class EmployeeEncapsulation:
     def __init__(self, name, salary):
@@ -680,10 +691,10 @@ iv) what is Method Overriding?
     Example:
 
 
-'''class ParentClass:
+'''class ParentClass: # type: ignore
     def show(self):
         print("Parent class method")
-class ChildClass(ParentClass):
+class ChildClass(ParentClass): # pyright: ignore[reportRedeclaration]
     def show(self):
         print("Child class method")
 child = ChildClass()
@@ -774,11 +785,11 @@ c: 3
     Example:
 '''
 import time
-def task1():
+def task1(): # pyright: ignore[reportRedeclaration]
     print("Task 1 start")
     time.sleep(2)
     print("Task 1 done")
-def task2():
+def task2(): # type: ignore
     print("Task 2 start")
     time.sleep(1)
     print("Task 2 done")
@@ -836,7 +847,7 @@ Task 1 done
 '''
 import threading
 import time 
-def cpu_bound_task():
+def cpu_bound_task(): # type: ignore
     count = 0
     for _ in range(10**7):
         count += 1
@@ -955,7 +966,7 @@ Child class method
     initial state set karne ke liye hota hai.
 Example:
         '''
-class Student:
+class Student: # pyright: ignore[reportRedeclaration]
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -993,7 +1004,7 @@ Key Features of Django ORM
                 migrations ka use karta hai.
 Example of Django ORM:
 '''
-from django.db import models
+from django.db import models # type: ignore
 class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
@@ -1005,7 +1016,7 @@ new_book.save()
 books = Book.objects.filter(author="John Doe")
 for book in books:
     print(book.title)
- '''       
+'''       
 21.what is migrations in Django?
     Migration Django ka system hai jo models
     ke changes ko database schema mein safely apply karta hai.
@@ -1041,7 +1052,7 @@ what is migrate?
             sirf dusre model ke ek record se linked hota hai.
             Example:     
 '''    
-from django.db import models
+from django.db import models # type: ignore
 class Author(models.Model):
     name = models.CharField(max_length=100)
 class Profile(models.Model):
@@ -1054,7 +1065,7 @@ class Profile(models.Model):
             multiple records se linked hota hai.
             Example:
 '''
-from django.db import models
+from django.db import models # type: ignore
 class AuthorOneToMany(models.Model):
     name = models.CharField(max_length=100)
 class BookOneToMany(models.Model):  
@@ -1066,7 +1077,7 @@ class BookOneToMany(models.Model):
             dusre model ke multiple records se linked hote hain.
             Example:
 '''
-from django.db import models
+from django.db import models # type: ignore
 class Student(models.Model):
     name = models.CharField(max_length=100)
 class Course(models.Model):
@@ -1083,7 +1094,7 @@ class Course(models.Model):
 # Using select_related
 books = Book.objects.select_related('author').all()
 for book in books:
-    print(book.title, book.author.name)
+    print(book.title, book.author.name) # pyright: ignore[reportAttributeAccessIssue]
 '''
     ii).prefetch_related:
         prefetch_related many-to-many aur reverse foreign key relationships
@@ -1095,7 +1106,7 @@ for book in books:
 # Using prefetch_related
 authors = Author.objects.prefetch_related('book_set').all()
 for author in authors:
-    for book in author.book_set.all():
+    for book in author.book_set.all(): # pyright: ignore[reportAttributeAccessIssue]
         print(author.name, book.title)  
 '''25.what is n+1 problem in django?
         N+1 problem ek performance issue hai
@@ -1108,14 +1119,14 @@ for author in authors:
 # N+1 problem example
 books = Book.objects.all()
 for book in books:
-    print(book.title, book.author.name)  # Additional query for each book
+    print(book.title, book.author.name)  # pyright: ignore[reportAttributeAccessIssue] # Additional query for each book
 '''
         Solution using select_related:
 '''
 # Solution using select_related
 books = Book.objects.select_related('author').all()
 for book in books:
-    print(book.title, book.author.name)  # Single query for all books and authors
+    print(book.title, book.author.name)  # pyright: ignore[reportAttributeAccessIssue] # Single query for all books and authors
 '''
 26.what is transaction in django?
    Transaction database operations ka ek 
@@ -1133,7 +1144,7 @@ for book in books:
             Commit hone ke baad changes permanent ho jate hain.
     Example of Django Transactions:
 '''
-from django.db import transaction   
+from django.db import transaction    # type: ignore
 @transaction.atomic
 def transfer_funds(account_from, account_to, amount):
     account_from.balance -= amount

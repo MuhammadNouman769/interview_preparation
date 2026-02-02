@@ -612,7 +612,7 @@ class Parent:
     def parent_method(self):
         print("Parent method")
 
-class Child(Parent):
+class Child(Parent): # type: ignore
     def child_method(self):
         print("Child method")
 child = Child()
@@ -685,11 +685,10 @@ calc = Calculator()
 print(calc.add(2, 3))      # Output: 5
 print(calc.add(2, 3, 4))   # Output: 9
 '''
-iv) what is Method Overriding?
-    Method Overriding me child class parent class ke method ko redefine karke
-    apna behavior implement karti hai.
-    Example:
-
+    ii) what is Method Overriding?
+            Method Overriding me child class parent class ke method ko redefine karke
+            apna behavior implement karti hai.
+            Example:
 
 '''class ParentClass: # type: ignore
     def show(self):
@@ -1078,7 +1077,7 @@ class BookOneToMany(models.Model):
             Example:
 '''
 from django.db import models # type: ignore
-class Student(models.Model):
+class Student(models.Model): # type: ignore
     name = models.CharField(max_length=100)
 class Course(models.Model):
     title = models.CharField(max_length=100)
@@ -1262,7 +1261,7 @@ StudentID | CourseID
             
 public
 '''
-class Student:
+class Student: # type: ignore
     name = "Nouman"   # public variable
 
     def show_name(self):   # public method
@@ -1274,7 +1273,7 @@ obj.show_name()        # ✔ allowed
 '''
 protected
 '''
-class Student:
+class Student: # pyright: ignore[reportRedeclaration]
     _age = 22   # protected variable
 
 class Child(Student):

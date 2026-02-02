@@ -1241,6 +1241,76 @@ StudentID | CourseID
     Garbage Collection Python ka automatic memory
     management system hai jo unused objects ko delete
     karke memory free karta hai.
+
+
+33. what is Access Modifiers?
+    Access Modifiers class ke data aur
+    method ki accessibility control krte hain
+        like:
+        i.public
+       ii.protected
+      iii.private  
+
+      a).Public
+         Public modifier me class ya methods ko har jagah se access kiya ja sakta hai
+         example:
+         
+      b).protect
+         Protected modifier me sirf same class aur uski child class me access hota hai
+      c).Private
+         jab ke Private modifier me access sirf usi class ke andar hota hai.
+            
+public
+'''
+class Student:
+    name = "Nouman"   # public variable
+
+    def show_name(self):   # public method
+        print(self.name)
+
+obj = Student()
+print(obj.name)        # ✔ allowed
+obj.show_name()        # ✔ allowed
+'''
+protected
+'''
+class Student:
+    _age = 22   # protected variable
+
+class Child(Student):
+    def show_age(self):
+        print(self._age)
+
+obj = Child()
+obj.show_age()        #  allowed
+# print(obj._age)     # technically possible, but recommended nahi
+'''
+'''
+class Student:
+    __salary = 50000   # private variable
+
+    def show_salary(self):
+        print(self.__salary)
+
+obj = Student()
+obj.show_salary()     #  allowed
+# print(obj.__salary) #  error
+'''
+33. instance kia hai ?
+    instance aik object hai jo class se create hota hai 
+
+34. method kia hai 
+    method aik aisa function hai jo class k andar 
+    define hota hai or instance k sath kam krta hai 
+
+35. what is signals
+    Django signals ek event-driven mechanism
+    hai jo model ya system me events hone par
+    automatic actions perform karne ke liye use
+    hota hai, jaise object save, delete, ya update hone par.
+
+
+
 what is REST APIs (DRF)?:
         REST (Representational State Transfer) APIs aik architectural style hai
         jo web services banane ke liye use hota hai.

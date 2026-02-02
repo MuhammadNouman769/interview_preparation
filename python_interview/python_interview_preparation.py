@@ -1323,10 +1323,63 @@ obj.show_salary()     #  allowed
         jab ke forms.ModelForm direct model ke sath bound hota hai
         aur save karte hi data database me chala jata hai.
    ii).forms.Form kab use karte ho?
-       Jab data database me save karna zaroori na ho,
-       jaise login, search, contact ya filter forms.
-
-
+        Jab data database me save karna zaroori na ho,
+        jaise login, search, contact ya filter forms.
+  iii).Aap ModelForm kab prefer karte ho?
+        Jab CRUD operations karne hon aur form ka data 
+        direct database me save karna ho, jaise story create ya profile update.
+   iv).Django me FormSet kia hota hai?
+        FormSet aik hi form ke multiple instances ko handle karta hai,
+        jahan user aik hi page pe multiple entries add kar sakta hai    
+    v).FormSet ka real-world example?
+        Invoice me multiple products add karna 
+        ya user ke multiple phone numbers collect karna.
+   vi).ModelFormSet aur FormSet me difference? 
+        FormSet database se linked nahi hota jab ke ModelFormSet
+        multiple model objects ko ek sath create ya update karta hai.
+  vii).InlineFormSet kia hota hai?      
+        InlineFormSet parent-child relationship ke models ko aik 
+        hi page pe manage karta hai, jahan child model ka
+        foreign key parent model se linked hota hai.
+ viii).InlineFormSet ka practical use?
+        Story create karte waqt us ke multiple 
+        chapters aik hi page pe add karna.
+   ix).inlineformset_factory kia karta hai?
+        Ye dynamically inline formset create karta hai 
+        parent aur child models ke darmiyan.
+    x).BaseInlineFormSet kyun use karte hain?
+        Jab inline formset me custom validation ya complex 
+        business rules lagani hon, jaise duplicate chapter order rokna.    
+   xi).InlineFormSet me validation kahan hoti hai?
+        Form level pe bhi hoti hai aur formset level pe bhi,
+        lekin cross-form validation ke liye BaseInlineFormSet use hota hai.         
+  xii).InlineFormSet aur signals me kia farq hai?
+        InlineFormSet form submission se pehle validation karta hai
+        jab ke signals database save ke baad trigger hote hain.
+ xiii).Aap complex forms ko kaise handle karte ho?
+        Main complex forms ko chhote reusable forms aur
+        formsets me break karta hoon, validation ko form
+        aur formset level pe rakhta hoon, aur clean code follow karta hoon.
+  xiv).Agar form me error aaye to aap kia karte ho?
+        Main form validation errors ko clearly log karta 
+        hoon, user ko readable error messages deta hoon,
+        aur edge cases ke liye custom clean methods likhta hoon.
+   xv).Forms me security kaise ensure hoti hai?
+        Django forms CSRF protection, built-in validation aur
+        cleaned_data ke zariye malicious input se bachate hain.
+  xvi).Zyada forms hon to performance kaise manage      
+        Main unnecessary forms kam rakhta hoon, extra 
+        parameter control karta hoon, aur queryset ko optimize karta hoon.     
+ xvii).Aap form logic ko view se alag kyun rakhte ho?
+        Separation of concerns ke liye, taake code readable, 
+        testable aur maintainable rahe.    
+xviii).InlineFormSet vs ModelFormSet?    
+        InlineFormSet parent-child relation ke liye hota hai 
+        jab ke ModelFormSet independent model objects ke liye use hota hai.         
+  xx).Aapko Django forms kyun pasand hain?      
+        Django forms development ko fast, secure aur scalable banate hain.
+        Validation, security aur maintainability built-in hoti hai, 
+        jo production applications ke liye ideal hai.
 what is REST APIs (DRF)?:
         REST (Representational State Transfer) APIs aik architectural style hai
         jo web services banane ke liye use hota hai.

@@ -1309,6 +1309,22 @@ obj.show_salary()     #  allowed
     automatic actions perform karne ke liye use
     hota hai, jaise object save, delete, ya update hone par.
 
+36. Aap Django forms kyun use karte ho?
+
+    Django forms input validation, security (CSRF),
+    aur clean data handling provide karte hain.
+    Ye manual HTML forms ke muqable me zyada safe 
+    aur maintainable hote hain.
+
+    i).forms.Form aur forms.ModelForm me kia farq hai?
+       
+        forms.Form database se linked nahi hota aur simple data
+        collect karne ke liye use hota hai,
+        jab ke forms.ModelForm direct model ke sath bound hota hai
+        aur save karte hi data database me chala jata hai.
+   ii).forms.Form kab use karte ho?
+       Jab data database me save karna zaroori na ho,
+       jaise login, search, contact ya filter forms.
 
 
 what is REST APIs (DRF)?:
